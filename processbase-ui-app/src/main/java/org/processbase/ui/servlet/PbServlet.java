@@ -1,0 +1,57 @@
+/**
+ * Copyright (C) 2011 PROCESSBASE Ltd.
+ * This library is free software; you can redistribute it and/or modify it under the terms
+ * of the GNU Lesser General Public License as published by the Free Software Foundation
+ * version 2.1 of the License.
+ * This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ * You should have received a copy of the GNU Lesser General Public License along with this
+ * program; if not, see <http://www.gnu.org/licenses/>.
+ */
+package org.processbase.ui.servlet;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+
+import javax.annotation.Resource;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+
+import com.vaadin.Application;
+import com.vaadin.terminal.gwt.server.AbstractApplicationServlet;
+import com.vaadin.ui.Window;
+import org.processbase.ui.osgi.PbPanelModuleService;
+
+public class PbServlet extends AbstractApplicationServlet {
+
+//    @Inject
+//    private PbApplication application;
+    @Resource(mappedName = "org.processbase.ui.osgi.PbPanelModuleService")
+    PbPanelModuleService panelModuleService;
+
+    @Override
+    protected void writeAjaxPageHtmlVaadinScripts(Window window,
+            String themeName, Application application, BufferedWriter page,
+            String appUrl, String themeUri, String appId,
+            HttpServletRequest request) throws ServletException, IOException {
+        page.write("<script type=\"text/javascript\">\n");
+        page.write("//<![CDATA[\n");
+        page.write("document.write(\"<script language='javascript' src='./jquery/jquery-1.4.4.min.js'><\\/script>\");\n");
+        page.write("document.write(\"<script language='javascript' src='./js/highcharts.js'><\\/script>\");\n");
+        page.write("//]]>\n</script>\n");
+        super.writeAjaxPageHtmlVaadinScripts(window, themeName, application,
+                page, appUrl, themeUri, appId, request);
+    }
+
+    @Override
+    protected Class<? extends Application> getApplicationClass()
+            throws ClassNotFoundException {
+        return PbApplication.class;
+    }
+
+    @Override
+    protected Application getNewApplication(HttpServletRequest request) throws ServletException {
+        return new PbApplication(panelModuleService);
+    }
+}

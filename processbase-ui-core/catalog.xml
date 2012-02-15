@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/marat/sources/processbase/processbase-ui-core/../../../development/processbase/processbase-3.0/processbase-ui-core-3.0/xml-resources/jaxb/bonitaforms/forms.xsd" uri="src/main/resources/jaxb/bonitaforms/forms.xsd"/>
+</catalog>

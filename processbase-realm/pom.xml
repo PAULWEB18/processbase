@@ -1,0 +1,35 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.processbase</groupId>
+        <artifactId>processbase</artifactId>
+        <version>3.0</version>
+    </parent>
+    <artifactId>processbase-realm</artifactId>
+    <packaging>jar</packaging>
+
+    <url>http://processbase.googlecode.com</url>
+    <name>PROCESSBASE Realm</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.glassfish.security</groupId>
+            <artifactId>security</artifactId>
+            <version>${glassfish.version}</version> 
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

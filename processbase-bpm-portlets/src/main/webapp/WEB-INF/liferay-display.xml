@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<display>
+    <category name="PROCESSBASE">
+        <portlet id="ConsolePortlet" />
+        <portlet id="MonitoringPortlet" />
+        <portlet id="ChartPortlet" />
+    </category>
+</display>

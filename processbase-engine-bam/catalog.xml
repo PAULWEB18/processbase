@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/marat/sources/processbase/processbase-engine-bam/../../../development/processbase/processbase-3.0/processbase-engine-bam-3.0/xml-resources/jaxb/bam/bam.xsd" uri="src/main/resources/jaxb/bam/bam.xsd"/>
+</catalog>

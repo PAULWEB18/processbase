@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<liferay-portlet-app>
+    <portlet>
+        <portlet-name>ConsolePortlet</portlet-name>
+        <instanceable>true</instanceable>
+        <ajaxable>false</ajaxable>
+        <private-session-attributes>false</private-session-attributes>
+    </portlet>
+    <portlet>
+        <portlet-name>AdminPortlet</portlet-name>
+        <instanceable>false</instanceable>
+        <ajaxable>false</ajaxable>
+        <private-session-attributes>false</private-session-attributes>
+        <control-panel-entry-category>portal</control-panel-entry-category>
+        <control-panel-entry-weight>20.0</control-panel-entry-weight>
+    </portlet>
+    <portlet>
+        <portlet-name>IdentityPortlet</portlet-name>
+        <instanceable>false</instanceable>
+        <ajaxable>false</ajaxable>
+        <private-session-attributes>false</private-session-attributes>
+        <control-panel-entry-category>portal</control-panel-entry-category>
+        <control-panel-entry-weight>21.0</control-panel-entry-weight>
+    </portlet>
+    <portlet>
+        <portlet-name>MonitoringPortlet</portlet-name>
+        <instanceable>true</instanceable>
+        <ajaxable>false</ajaxable>
+        <private-session-attributes>false</private-session-attributes>
+    </portlet>
+    <portlet>
+        <portlet-name>BAMPortlet</portlet-name>
+        <instanceable>false</instanceable>
+        <ajaxable>false</ajaxable>
+        <private-session-attributes>false</private-session-attributes>
+        <control-panel-entry-category>portal</control-panel-entry-category>
+        <control-panel-entry-weight>23.0</control-panel-entry-weight>
+    </portlet>
+    <portlet>
+        <portlet-name>ChartPortlet</portlet-name>
+        <instanceable>true</instanceable>
+        <ajaxable>false</ajaxable>
+        <private-session-attributes>false</private-session-attributes>
+    </portlet>
+</liferay-portlet-app>
